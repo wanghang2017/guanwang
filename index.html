@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="untitled.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script>
+        function setRem() {
+            document.addEventListener('DOMContentLoaded', function () {
+                const html = document.documentElement;
+                const windowWidth = html.clientWidth;
+                html.style.fontSize = windowWidth / 7.5 + 'px';
+                // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+            }, false);
+        }
+        setRem();
+        window.onresize=setRem;
+    </script>
+</head>
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-01">
+                <div class="container-top">
+                    <img src="./img/yu.png" alt="" class="container-top-img1">
+                    <p>我们为电影行业带来增量</p>
+                    <img src="./img/1.png" alt="" class="base-img01">
+                </div>
+                <div class="container-bottom">
+                    <img src="./img/第一屏-移动端.png" alt="">
+                </div>
+                <img src="./img/01.png" alt="" class="decoration-left-img">
+                <div class="decoration-left"></div>
+            </div>
+            <div class="swiper-slide slide-02">
+                <div class="container-top">
+                    <img src="./img/第二屏-移动端.png" alt="">
+                </div>
+                <div class="container-bottom">
+                    <p>Our destination</p>
+                    <p>重塑高效的电影发行方式</p>
+                    <img src="./img/1.png" alt="" class="base-img01">
+                    <p>我们热爱电影，了解电影行业；我们从事互联网，相信创新的力量。我们希望通过互联网手段实现观众、影院和片方的无缝衔接，更好的满足各方诉求，为电影行业创造新的增量价值。</p>
+                </div>
+                <img src="./img/02.png" alt="" class="decoration-left-img">
+                <div class="decoration-left"></div>
+            </div>
+            <div class="swiper-slide slide-03">
+                <div class="container-top">
+                    <p>To cinema</p>
+                    <p>技术赋能影院，提升影院收入</p>
+                    <img src="./img/1.png" alt="" class="base-img01">
+                    <p>通过互联网技术和运营手段，我们为电影院提供基于自有平台的内容资源和技术支持，让电影院有能力进行精细化的内容运营，具备对不同观影口味观众的主动吸引能力，最终提升电影院票房收入和非票收入。</p>
+                </div>
+                <div class="container-bottom">
+                    <img src="./img/第三屏-移动端.png" alt="">
+                </div>
+                <img src="./img/03.png" alt="" class="decoration-left-img">
+                <div class="decoration-left"></div>
+            </div>
+            <div class="swiper-slide slide-04">
+                <div class="container-top">
+                    <img src="./img/第四屏-移动端.png" alt="">
+                </div>
+                <div class="container-bottom"}>
+                    <p>To distributor</p>
+                    <p>让影片找观众，让观众找到影片</p>
+                    <img src="./img/1.png" alt="" class="base-img01">
+                    <p>通过互联网技术手段，达到电影院端的高频次观影人群的导流；利用互联网传播优势，实现粉丝阵营和潜在观影人群的导流。在电影发行有效期内，扩大影片的观影人群基数，最终提升影片的总体票房收入。
+                    </p>
+                </div>
+                <img src="./img/04.png" alt="" class="decoration-left-img">
+                <div class="decoration-left"></div>
+            </div>
+            <div class="swiper-slide slide-05">
+                <div class="container-top">
+                    <p>To audience</p>
+                    <p>我想看什么，电影院放什么</p>
+                    <img src="./img/1.png" alt="" class="base-img01">
+                    <p>应用创新模式，将电影“遥控器”交到观众的手里，在电影院选择自己喜欢的电影，观众想看什么，电影院放什么。观众拉上观众，在一起欢聚，让看电影成为一种有温度、有情感的娱乐消费方式。</p>
+                </div>
+                <div class="container-bottom">
+                    <img src="./img/第五屏-移动端.png" alt="">
+                </div>
+                <img src="./img/05.png" alt="" class="decoration-left-img">
+                <div class="decoration-left"></div>
+            </div>
+            <div class="swiper-slide slide-06">
+                    <p>联系我们</p>
+                    <img src="./img/1.png" alt="" class="base-img01">
+                    <p>通信地址：北京市朝阳区望京SOHO 2号楼A座1207室
+                        邮政编码：100102<br/>
+                        联系电话：010-58294305<br/>
+                        E-mail：bizsupport@movieplusplus.com</p>
+                    <p>&copy; Movieplusplus.com</p>
+                <img src="./img/06.png" alt="" class="decoration-left-img">
+                <div class="decoration-left"></div>
+            </div>
+        </div>
+        <div class="container-dots">
+            <span class="dots-active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span id="arrow-final"></span>
+        </div>
+    </div>
+
+<script>
+  var dotContainer = document.getElementsByClassName("container-dots");
+  var dots = dotContainer[0].getElementsByTagName("span");
+  dots = Array.prototype.slice.call(dots,0);
+  var mySwiper = new Swiper('.swiper-container', {
+    autoplay:false,
+    direction:'vertical',
+    on: {
+      slideChangeTransitionEnd: function(){
+        dots.forEach(function (item,index) {
+          if(index===mySwiper.activeIndex){
+            item.className="dots-active";
+            return;
+          }
+          item.className="";
+        })
+      }
+    }
+  });
+</script>
+</body>
+</html>
