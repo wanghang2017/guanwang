@@ -5,9 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>影加科技</title>
-    <link rel="stylesheet" href="untitled.css">
+    <link rel="stylesheet" href="./mobileIndex.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
     <script>
         function setRem() {
             document.addEventListener('DOMContentLoaded', function () {
@@ -32,7 +31,7 @@
                     <img src="./img/1.png" alt="" class="base-img01">
                 </div>
                 <div class="container-bottom">
-                    <img src="./img/page01.jpg" alt="">
+                    <img data-src="./img/page01.jpg" alt="">
                 </div>
                 <div class="decoration-left">
                     <div class="decoration-left-lines"></div>
@@ -42,7 +41,7 @@
             </div>
             <div class="swiper-slide slide-02">
                 <div class="container-top">
-                    <img src="./img/page02.jpg" alt="">
+                    <img data-src="./img/page02.jpg" alt="">
                 </div>
                 <div class="container-bottom">
                     <p>Our destination</p>
@@ -64,7 +63,7 @@
                     <p>通过互联网技术和运营手段，我们为电影院提供基于自有平台的内容资源和技术支持，让电影院有能力进行精细化的内容运营，具备对不同观影口味观众的主动吸引能力，最终提升电影院票房收入和非票收入。</p>
                 </div>
                 <div class="container-bottom">
-                    <img src="./img/page03.jpg" alt="">
+                    <img data-src="./img/page03.jpg" alt="">
                 </div>
                 <div class="decoration-left">
                     <div class="decoration-left-lines"></div>
@@ -74,7 +73,7 @@
             </div>
             <div class="swiper-slide slide-04">
                 <div class="container-top">
-                    <img src="./img/page04.jpg" alt="">
+                    <img data-src="./img/page04.jpg" alt="">
                 </div>
                 <div class="container-bottom"}>
                     <p>To distributor</p>
@@ -97,7 +96,7 @@
                     <p>应用创新模式，将电影“遥控器”交到观众的手里，在电影院选择自己喜欢的电影，观众想看什么，电影院放什么。观众拉上观众，在一起欢聚，让看电影成为一种有温度、有情感的娱乐消费方式。</p>
                 </div>
                 <div class="container-bottom">
-                    <img src="./img/page05.jpg" alt="">
+                    <img data-src="./img/page05.jpg" alt="">
                 </div>
                 <div class="decoration-left">
                     <div class="decoration-left-lines"></div>
@@ -131,11 +130,23 @@
             <span id="arrow-final"></span>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
 <script>
   var dotContainer = document.getElementsByClassName("container-dots");
   var dots = dotContainer[0].getElementsByTagName("span");
   dots = Array.prototype.slice.call(dots,0);
+  var imgs = document.getElementsByTagName("img");
+  imgs = Array.prototype.slice.call(imgs,0);
+  imgs.forEach(function(item){
+    var src = item.getAttribute("data-src");
+    if(src){
+      var img = new Image();
+      img.onload=function () {
+        item.src=src;
+      };
+      img.src=src;
+    }
+  });
   var mySwiper = new Swiper('.swiper-container', {
     autoplay:false,
     direction:'vertical',
